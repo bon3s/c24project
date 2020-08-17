@@ -9,9 +9,13 @@ import ArvoRegularWoff from './fonts/arvo-regular-webfont.woff';
 import ArvoRegularWoff2 from './fonts/arvo-regular-webfont.woff2';
 import ArvoBoldWoff from './fonts/arvo-bold-webfont.woff';
 import ArvoBoldWoff2 from './fonts/arvo-bold-webfont.woff2';
+import BodyBackground from './img/bg_dirt.jpg';
 
 const GlobalStyles = createGlobalStyle`
-
+body{
+    /* background:url(${BodyBackground}) no-repeat; */
+    background-size:cover;
+}
 .container{
     max-width:1024px !important;
 }
