@@ -5,9 +5,9 @@ import { Service, RestaurantsReply } from '../service/service';
 import config from '../config';
 
 export class URL {
-    url: string;
-
-    target: string = config.TARGET;
+    private url: string;
+    private target: string = config.TARGET;
+    private api_key: string = config.API_KEY;
 
     constructor(scheme: string, backend: string) {
         this.url = `${scheme}://${backend}`;
@@ -15,6 +15,10 @@ export class URL {
 
     restaurantPath() {
         return this.url + this.target;
+    }
+
+    apiKeyHandler() {
+        return this.api_key;
     }
 }
 
@@ -31,6 +35,9 @@ class REST implements Service {
         console.log(this.url.restaurantPath());
         const res = await this.request(this.getRestaurants, {
             method: 'GET',
+            headers: {
+                'secret-key': this.url.apiKeyHandler(),
+            },
             url: this.url.restaurantPath(),
         });
 

@@ -15,8 +15,8 @@ export default class Restaurant {
             throw new Error('Street should be a string');
         }
 
-        if (typeof maybe.zip !== 'number') {
-            throw new Error('Zip should be a number');
+        if (typeof maybe.zip !== 'string') {
+            throw new Error('Zip should be a string');
         }
 
         if (typeof maybe.city !== 'string') {
