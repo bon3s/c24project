@@ -1,15 +1,13 @@
 export default {
     BACKEND_SCHEME: 'https',
-    BACKEND: 'dummy.backend.com',
-    APPENDIX: '?api_key=',
-    API_KEY: 'r4nd0mAp!k3Y',
+    BACKEND: 'api.jsonbin.io',
+    TARGET: '/b/5f3a5150b88c04101cf58b8a',
     TIMEOUT: 20,
 };
 
 export interface configType {
     BACKEND_SCHEME: string;
     BACKEND: string;
-    APPENDIX: string;
-    API_KEY: string;
+    TARGET: string;
     TIMEOUT: number;
 }
