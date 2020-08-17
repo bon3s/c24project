@@ -9,7 +9,7 @@ interface Props extends RouterProps {}
 
 const Header = (props: Props) => {
     return (
-        <HeaderStyles collapseOnSelect expand="md">
+        <HeaderStyles collapseOnSelect expand="sm">
             <Navbar.Brand href="#home">
                 <img src={Logo} alt={'Company logo'} />
             </Navbar.Brand>
