@@ -55,7 +55,7 @@ export default class Restaurant {
     name: string;
     rating: number;
     street: string;
-    zip: number;
+    zip: string;
     city: string;
     website: string;
     burgerClassic: string;
@@ -66,7 +66,7 @@ export default class Restaurant {
         name: string,
         rating: number,
         street: string,
-        zip: number,
+        zip: string,
         city: string,
         website: string,
         burgerClassic: string,
